@@ -3,10 +3,10 @@ $token = "1676765529:AAG1WXeh36ba3vYgUU5ygZHU6HxcsmUPoXk";
 $link1 = "https://api.telegram.org/bot" . $token;
 
 $updates = file_get_contents('php://input');
-$updates = json_decode($updates, true);
+$updates = json_decode($updates, TRUE);
 
 $msgID = $updates['message']['from']['id'];
-$name = $updates['message']['from']['firstname'];
+$name = $updates['message']['from']['first_name'];
 $text = $updates['message']['text'];
 
 switch ($text) {
